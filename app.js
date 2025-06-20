@@ -7,6 +7,7 @@ class Storybook {
         this.pageCounter = document.getElementById('pageCounter');
         this.prevBtn = document.getElementById('prevBtn');
         this.nextBtn = document.getElementById('nextBtn');
+        this.buttonAudio = null; // For custom sound
         
         this.init();
     }
@@ -16,7 +17,6 @@ class Storybook {
         this.updateNavigation();
         this.setupKeyboardControls();
         this.setupImageClickHandlers();
-        this.addButtonSounds();
     }
     
     showPage(pageIndex) {
@@ -91,6 +91,15 @@ class Storybook {
         this.playButtonSound();
     }
     
+    playButtonSound() {
+        if (!this.buttonAudio) {
+            // Change 'click.mp3' to your custom sound file
+            this.buttonAudio = new Audio('clip.mp3');
+        }
+        this.buttonAudio.currentTime = 0; // Rewind to start
+        this.buttonAudio.play();
+    }
+    
     setupKeyboardControls() {
         document.addEventListener('keydown', (e) => {
             switch(e.key) {
@@ -133,39 +142,6 @@ class Storybook {
             // Add cursor pointer style
             img.style.cursor = 'pointer';
         });
-    }
-    
-    addButtonSounds() {
-        // Create simple button click sound using Web Audio API
-        this.audioContext = null;
-        try {
-            this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
-        } catch (e) {
-            console.log('Web Audio API not supported');
-        }
-    }
-    
-    playButtonSound() {
-        if (!this.audioContext) return;
-        
-        try {
-            const oscillator = this.audioContext.createOscillator();
-            const gainNode = this.audioContext.createGain();
-            
-            oscillator.connect(gainNode);
-            gainNode.connect(this.audioContext.destination);
-            
-            oscillator.frequency.setValueAtTime(800, this.audioContext.currentTime);
-            oscillator.frequency.exponentialRampToValueAtTime(400, this.audioContext.currentTime + 0.1);
-            
-            gainNode.gain.setValueAtTime(0.1, this.audioContext.currentTime);
-            gainNode.gain.exponentialRampToValueAtTime(0.01, this.audioContext.currentTime + 0.1);
-            
-            oscillator.start(this.audioContext.currentTime);
-            oscillator.stop(this.audioContext.currentTime + 0.1);
-        } catch (e) {
-            // Silently fail if audio doesn't work
-        }
     }
 }
 
