@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Stegosaurus Won't Share - Interactive Storybook</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="storybook-container">
+        <!-- Cover Page -->
+        <div class="page cover-page active" id="cover">
+            <div class="cover-content">
+                <h1 class="title">My Stegosaurus Won't Share</h1>
+                <div class="cover-image">
+                    <div class="stegosaurus-icon">🦕</div>
+                </div>
+                <p class="subtitle">A Fun Story About Sharing and Friendship</p>
+                <button class="btn btn--primary btn--lg start-btn" onclick="startStory()">
+                    Start Reading! 📖
+                </button>
+            </div>
+        </div>
+
+        <!-- Story Pages -->
+        <div class="page story-page" id="page-1">
+            <div class="story-content">
+                <div class="image-container">
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1750392894/gpt4o_images/psi9vhsamwtzimrnfoz1.png" alt="Sammy the Stegosaurus in his jungle home" class="story-image">
+                </div>
+                <div class="text-container">
+                    <p class="story-text">In a jungle where the palm trees sway,<br>
+                    Lived a Stegosaurus named Sammy, so gray.<br>
+                    With plates on his back, all spiky and tall,<br>
+                    He had the best toys, the best of them all!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="page story-page" id="page-2">
+            <div class="story-content">
+                <div class="image-container">
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1750392956/gpt4o_images/rtfqevinrg8lovxemlzc.png" alt="Sammy with his toys, refusing to share" class="story-image">
+                </div>
+                <div class="text-container">
+                    <p class="story-text">A shiny red ball, a kite that would soar,<br>
+                    A puzzle of bones from a dino galore.<br>
+                    But Sammy would grumble, he'd huff, and he'd glare,<br>
+                    "My toys are MINE! I'm not gonna share!"</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="page story-page" id="page-3">
+            <div class="story-content">
+                <div class="image-container">
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1750393039/gpt4o_images/twlfy5wc5wkzxbyfswes.png" alt="Triceratops asking Sammy to play" class="story-image">
+                </div>
+                <div class="text-container">
+                    <p class="story-text">His friends, like Triceratops, gentle and kind,<br>
+                    Would ask, "Can we play?" with hope in their mind.<br>
+                    But Sammy would stomp, his tail in the air,<br>
+                    "No way, no how, I just won't share!"</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="page story-page" id="page-4">
+            <div class="story-content">
+                <div class="image-container">
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1750393106/gpt4o_images/vmzhcdudxvbfbbgnbjdq.png" alt="Pteranodon pleading with Sammy to share" class="story-image">
+                </div>
+                <div class="text-container">
+                    <p class="story-text">Pteranodon swooped with a squawk and a frown,<br>
+                    "Sammy, your toys could bring joy to this town!"<br>
+                    But Sammy just roared, "Go find your own stuff!<br>
+                    My toys are for ME, and that's quite enough!"</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="page story-page" id="page-5">
+            <div class="story-content">
+                <div class="image-container">
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1750393160/gpt4o_images/hvjwontcckjxobpybv58.png" alt="The red ball rolling away and getting lost" class="story-image">
+                </div>
+                <div class="text-container">
+                    <p class="story-text">One day, oh my, his red ball rolled away,<br>
+                    It bounced through the ferns and got lost in the clay.<br>
+                    Sammy was sad, his eyes filled with tears,<br>
+                    "No ball, no fun!" he cried to his peers.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="page story-page" id="page-6">
+            <div class="story-content">
+                <div class="image-container">
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1750393222/gpt4o_images/a6mfrdsbae28v4rvjuon.png" alt="Velociraptor offering to help find the ball" class="story-image">
+                </div>
+                <div class="text-container">
+                    <p class="story-text">Then Velociraptor, so speedy and small,<br>
+                    Said, "Sammy, don't worry, we'll find your red ball!"<br>
+                    She darted and dashed, with friends by her side,<br>
+                    They searched through the jungle, no place left to hide.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="page story-page" id="page-7">
+            <div class="story-content">
+                <div class="image-container">
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1750393284/gpt4o_images/lkio6kvcgsv0mgjxiqey.png" alt="Friends finding the ball in the tree and working together" class="story-image">
+                </div>
+                <div class="text-container">
+                    <p class="story-text">They found it at last, stuck high in a tree,<br>
+                    Triceratops nudged it, and down it came free!<br>
+                    Sammy was thrilled, his heart felt so light,<br>
+                    He saw how his friends made everything right.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="page story-page" id="page-8">
+            <div class="story-content">
+                <div class="image-container">
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1750393385/gpt4o_images/rah8kdlk3tvsnmtgatge.png" alt="Sammy apologizing and learning to share" class="story-image">
+                </div>
+                <div class="text-container">
+                    <p class="story-text">"I'm sorry," said Sammy, his voice soft and low,<br>
+                    "I've learned something big, and now I must show.<br>
+                    My toys are more fun when we all play as one,<br>
+                    Let's share and laugh till the day's work is done!"</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="page story-page" id="page-9">
+            <div class="story-content">
+                <div class="image-container">
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1750393446/gpt4o_images/efko2lcqfshitfwpid8s.png" alt="All the dinosaurs playing together happily" class="story-image">
+                </div>
+                <div class="text-container">
+                    <p class="story-text">So Sammy and friends played under the sun,<br>
+                    With kites, balls, and puzzles, they had so much fun.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="page story-page" id="page-10">
+            <div class="story-content">
+                <div class="image-container">
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1750393492/gpt4o_images/jajsbqys1slw6esztpje.png" alt="Sammy glowing happily, having learned about friendship" class="story-image">
+                </div>
+                <div class="text-container">
+                    <p class="story-text">His plates seemed to gleam with a happier glow,<br>
+                    For sharing, he learned, makes friendship grow!</p>
+                    <div class="story-end">
+                        <p class="end-message">🌟 The End 🌟</p>
+                        <button class="btn btn--primary btn--lg" onclick="restartStory()">
+                            Read Again! 📚
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Controls -->
+        <div class="navigation-controls">
+            <button class="nav-btn prev-btn" onclick="previousPage()" id="prevBtn">
+                ← Previous
+            </button>
+            
+            <div class="page-info">
+                <span class="page-counter" id="pageCounter">Page 1 of 10</span>
+                <button class="btn btn--secondary restart-btn" onclick="restartStory()">
+                    Start Over 🔄
+                </button>
+            </div>
+            
+            <button class="nav-btn next-btn" onclick="nextPage()" id="nextBtn">
+                Next →
+            </button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
