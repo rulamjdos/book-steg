@@ -619,9 +619,6 @@ select.form-control {
     format('woff2');
 }
 
-/* Import kid-friendly fonts */
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Fredoka:wght@400;600;700&display=swap');
-
 /* Override design system for kid-friendly theme */
 :root {
   --color-jungle-green: #4CAF50;
@@ -630,8 +627,8 @@ select.form-control {
   --color-dino-purple: #AB47BC;
   --color-happy-orange: #FF8A65;
   --color-friendly-pink: #F48FB1;
-  --font-family-story: 'Comic Neue', 'Fredoka', cursive;
-  --font-family-title: 'Fredoka', 'Comic Neue', cursive;
+  --font-family-story: var(--font-family-base); /* MODIFIED: Use base font */
+  --font-family-title: var(--font-family-base); /* MODIFIED: Use base font */
   --story-text-size: 1.4rem;
   --title-size: 3.5rem;
 }
